@@ -1,0 +1,13 @@
+name = "projects"
+license = "MIT"
+licenselink = "https://github.com/thejaydox/projects/blob/master/LICENSE.md"
+description = "A theme for Hugo to display projects and applications."
+homepage = "https://tdm.io/projects"
+tags = ["projects", "projects listing"]
+features = ["display projects", "display applications"]
+min_version = 0.14
+
+[author]
+  name = "Jared Booker <jay@tdm.io>"
+  homepage = "https://tdm.io/thejaydox"
+  

@@ -1,0 +1,306 @@
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  line-height: 1em;
+}
+
+/* Header - Primary, Used on front page */
+
+.header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+}
+
+.header > .site-title {
+  position: relative;
+  max-width: 300px;
+  line-height: 1.8em;
+  margin: 0 auto;
+  font-size: 28px;
+  font-weight: 300;
+  text-align: center;
+  color: rgba(44,62,80 ,1);
+}
+
+.header > .site-title:after {
+  position: absolute;
+  content: "";
+  bottom: 0px;
+  left: 25%;
+  width: 50%;
+  height: 2px;
+  background-color: rgba(44,62,80 ,1);
+}
+
+.header > .desc {
+  position: relative;
+  max-width: 300px;
+  font-size: 12px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 5px;
+  color: rgba(44,62,80, 0.7);
+}
+
+/* Header Single - For Single page view */
+
+.header-single {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  border: 0;
+  border-bottom: 1px solid rgba(82,80,82,0.2);
+}
+
+.header-single > .site-title {
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+  line-height: 2em;
+}
+
+.header-single > .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 2.8em;
+  font-weight: 300;
+  font-size: 14px;
+  text-decoration: none;
+  margin-left: 10px;
+  color: rgba(82,80,82,1);
+}
+
+/* Wrap content */
+
+.content {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  min-height: 475px;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+
+/* Project view */
+
+.project {
+  min-width: 100%;
+  min-height: 400px;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-shadow: 0px -5px 17px -5px rgba(82,80,82,0.77);
+  -moz-box-shadow: 0px -5px 17px -5px rgba(82,80,82,0.77);
+  box-shadow: 0px -5px 17px -5px rgba(82,80,82,0.77);
+}
+
+.project > .header-img {
+  position: absolute;
+  width: 100%;
+  height: 170px;
+  transform: scale(1.0);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  z-index: 1;
+  transform: scale(1.4);
+  -webkit-filter: blur(1.5px);
+  -moz-filter: blur(1.5px);
+  -o-filter: blur(1.5px);
+  -ms-filter: blur(1.5px);
+  filter: blur(1.5px);
+}
+
+.project > .header-img-clear {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 308px;
+  height: 175px;
+  z-index: 2;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.project > .title {
+  position: absolute;
+  top: 161px;
+  left: 5px;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 1em;
+  z-index: 2;
+}
+
+.project > .title a,
+.project > .title {
+  text-decoration: none;
+  color: white;
+  text-shadow: 1px 1px #444;
+}
+
+.project > .info {
+  position: absolute;
+  top: 193px;
+  width: 100%;
+  min-height: 400px;
+  background-color: #fff;
+  font-size: 14px;
+  padding: 10px;
+  z-index: 2;
+}
+
+.project > .info span {
+  color: #666;
+  font-weight: 300;
+}
+
+.project > .info span {
+  color: #95a5a6;
+}
+
+.project .links {
+  position: absolute;
+  right: 10px;
+  text-align: right;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.project .links span {
+  padding: 5px;
+  color: rgba(78,78,78 ,1);
+}
+
+.project .links span:hover {
+  color: rgba(39,174,96 ,1);
+}
+
+.project .links a {
+  text-decoration: none;
+}
+
+/* 
+  ### Project listing
+    Content with .list class should use the following,
+    these are for non-Single view.
+*/
+
+.project.list {
+  float: left;
+  margin: 10px;
+  min-width: 250px;
+  min-height: 245px;
+}
+
+.project.list > .title {
+  top: 60px;
+  font-size: 24px;
+}
+
+/* Quick info / Summary section */
+
+.project.list > .quick-info {
+  position: absolute;
+  top: 95px;
+  width: 100%;
+  padding: 5px;
+  background-color: #fff;
+  font-size: 13px;
+  z-index: 1;
+}
+
+.project.list > .quick-info span {
+  color: #666;
+  font-weight: 300;
+}
+
+.project.list > .quick-info span {
+  color: 95a5a6;
+}
+
+/* Blur-Zoom image only on hover
+   Set would-be defaults for zoom and blur */
+
+.project.list > .header-img {
+  transform: scale(1.0);
+  -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -o-filter: blur(0px);
+  -ms-filter: blur(0px);
+  filter: blur(0px);
+}
+
+.project.list:hover .header-img {
+  transform: scale(1.2);
+  -webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  -o-filter: blur(1px);
+  -ms-filter: blur(1px);
+  filter: blur(1px);
+}
+
+/* Footer */
+
+.footer {
+  position: relative;
+  width: 100%;
+  font-size: 12px;
+  color: rgba(127,140,141, 0.7);
+  font-weight: 300;
+  text-align: center;
+}
+
+.footer a {
+  color: rgba(41,128,185, 0.7);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: rgba(39,174,96 ,1);
+}
+
+/* Animations */
+
+/* Med-Fast */
+
+.project .links span {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* Med-slow */
+
+.header-img,
+.footer a {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/**/
+
+.info {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+/* Modifiers */
+
+.font-black {
+  color: #000 !important;
+}

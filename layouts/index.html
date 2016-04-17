@@ -1,0 +1,25 @@
+{{ partial "head.html" . }}
+
+<header class="header">
+  <div class="site-title">{{ .Site.Title }}</div>
+  <div class="desc">{{ .Site.Params.description }}</div>
+</header>
+
+<main class="content">
+  {{ range .Data.Pages }}
+    <div class="project list">
+      <div class="header-img" style="background-image:url({{ .Params.image }});"></div>
+      <div class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></div>
+      <div class="quick-info">
+        <span>Version</span> {{ .Params.version }}<br/>
+        <span>Latest Release</span> {{ .Params.rdate }}
+        <br/><br/>
+        <span>Maintainer</span> {{ .Params.maintainer }}
+        <br/><br/>        
+        <span class="summary">{{ .Summary }}</span>
+      </div>
+    </div>
+  {{ end }}
+</main>
+
+{{ partial "footer.html" }}

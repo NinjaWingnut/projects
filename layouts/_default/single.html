@@ -1,0 +1,56 @@
+{{ partial "head.html" }}
+{{ partial "header-single.html" . }}
+<main class="content">
+  <div class="project">
+    <div class="header-img" style="background-image:url({{ .Params.image }});"></div>
+    <div class="header-img-clear" style="background-image:url({{ .Params.image }});"></div>
+    <div class="title">{{ .Title }}</div>
+    <div class="info">
+      <div class="links">
+        <!-- Only display the following links based off supplied Params -->
+        <!-- ## Windows Download Link -->
+        {{ if .Params.windl }}
+          <a href="{{ .Params.windl }}">
+            <span class="ion-social-windows"></span>
+          </a>
+        {{ end }}
+        
+        <!-- ## Linux Download Link  -->
+        {{ if .Params.lxdl }}
+          <a href="{{ .Params.lxdl }}">
+            <span class="ion-social-tux"></span>
+          </a>
+        {{ end }}
+        
+        <!-- ## OS X Download Link  -->
+        {{ if .Params.osxdl }}
+          <a href="{{ .Params.osxdl }}">
+            <span class="ion-social-apple"></span>
+          </a>
+        {{ end }}
+        
+        <!-- ## Source Link  -->
+        {{ if .Params.source }}
+          <a href="{{ .Params.source }}">
+            <span class="ion-code-working"></span>
+          </a>
+        {{ end }}
+        
+        <!-- ## Web Link  -->
+        {{ if .Params.weblink }}
+          <a href="{{ .Params.weblink }}">
+            <span class="ion-link"></span>
+          </a>
+        {{ end }}
+      </div>
+      <span>Version</span> {{ .Params.version }}<br/>
+      <span>Latest Release</span> {{ .Params.rdate }}
+      <br/><br/>
+      <span>Maintainer</span> {{ .Params.maintainer }}
+      <br/>
+      {{ .Content }}
+    </div>
+  </div>
+</main>
+
+{{ partial "footer.html" }}
