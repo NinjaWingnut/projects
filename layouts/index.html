@@ -11,12 +11,27 @@
       <div class="header-img" style="background-image:url({{ .Params.image }});"></div>
       <div class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></div>
       <div class="quick-info">
-        <span>Version</span> {{ .Params.version }}<br/>
+        <!-- ## Current Version -->        
+        {{ if .Params.version }}
+          <span>Version</span> {{ .Params.version }}<br/>
+        {{ end }}
+        
+        <!-- ## Release Date -->
+        {{ if .Params.rdate }}
         <span>Latest Release</span> {{ .Params.rdate }}
+        {{ end }}
         <br/><br/>
-        <span>Maintainer</span> {{ .Params.maintainer }} <a href='mailto:{{ .Params.email }}'> {{ .Params.email }}</a><br/>
-		<span>Manager</span> {{ .Params.manager }} <a href='mailto:{{ .Params.manageremail }}'i> {{ .Params.manageremail }} </a><br/>
-        <br/><br/>        
+        
+        <!-- ## Maintainer -->
+        {{ if .Params.maintainer }}
+          <span>Maintainer</span> {{ .Params.maintainer }} <a href='mailto:{{ .Params.email }}'> {{ .Params.email }}</a><br/>
+        {{ end }}
+        
+        <!-- ## Manager -->
+        {{ if .Params.manager }}
+		      <span>Manager</span> {{ .Params.manager }} <a href='mailto:{{ .Params.manageremail }}'i> {{ .Params.manageremail }} </a><br/>
+        {{ end }}
+        <br/>      
         <span class="summary">{{ .Summary }}</span>
       </div>
     </div>
