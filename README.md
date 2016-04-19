@@ -2,6 +2,9 @@
 A Hugo theme for showing off projects and
 applications.
 
+## Previews
+- [Project - Small Window](https://github.com/TheJaydox/projects/blob/master/static/preview/HugoProjects-ProjectScreenshot.png)
+
 ## Available Parameters
 > Required are as the title suggests, all others
 are optional and will only show if set.
