@@ -14,7 +14,8 @@
         <span>Version</span> {{ .Params.version }}<br/>
         <span>Latest Release</span> {{ .Params.rdate }}
         <br/><br/>
-        <span>Maintainer</span> {{ .Params.maintainer }}
+        <span>Maintainer</span> {{ .Params.maintainer }} <a href='mailto:{{ .Params.email }}'> {{ .Params.email }}</a><br/>
+		<span>Manager</span> {{ .Params.manager }} <a href='mailto:{{ .Params.manageremail }}'i> {{ .Params.manageremail }} </a><br/>
         <br/><br/>        
         <span class="summary">{{ .Summary }}</span>
       </div>
