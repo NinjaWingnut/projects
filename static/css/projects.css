@@ -206,6 +206,21 @@ body {
   font-size: 24px;
 }
 
+.project.list > .links {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 22px;
+  z-index: 1;
+  background-color: rgba(236,240,241, 0.7);
+  padding-right: 10px;
+}
+
+.project.list > .links:hover {
+  background-color: rgba(236,240,241, 1);  
+}
+
+
 /* Quick info / Summary section */
 
 .project.list > .quick-info {
@@ -283,6 +298,7 @@ body {
 /* Med-slow */
 
 .header-img,
+.project.list > .links,
 .footer a {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
