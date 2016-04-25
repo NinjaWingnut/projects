@@ -10,6 +10,9 @@
     <div class="project list">
       <div class="header-img" style="background-image:url({{ .Params.image }});"></div>
       <div class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></div>
+      <div class="links">
+        {{ partial "links.html" . }}
+      </div> 
       <div class="quick-info">
         <!-- ## Current Version -->        
         {{ if .Params.version }}
